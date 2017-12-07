@@ -22,7 +22,7 @@ export class CreateTodoComponent implements OnInit {
     if (valid) {
       this.todoService.createToDo(this.todo).subscribe(
         data => {
-          alert("Saved!");
+        this.router.navigate(['/overview'])
         },
         err => {
           alert('Something went wrong!');
